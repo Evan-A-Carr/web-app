@@ -1,0 +1,165 @@
+html {
+    display: grid;
+
+    min-height: 100%;
+
+}
+
+/* background-image: url("pictures/cortex_prime_symbols.png"); */
+
+body {
+    display: inherit;
+}
+
+#root, .root-child {
+    display: inherit;
+}
+
+.root-child {
+    display: inherit;
+
+    grid-template-columns: 1fr 6fr;
+    grid-gap: 1em;
+}
+
+/*
+#root-child-home {
+    background-color: green;
+}
+
+#root-child-tt_app {
+    background-image: url("pictures/cortex_prime_symbols.png");
+}
+ */
+
+.side-bar
+{
+    padding: 1em;
+
+    background-color: #ffffff;
+    outline: #000000 solid 0.25em;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/** Hide the side-bar if the width is too small **/
+@media only screen and (max-width: 1000px)
+{
+    .root-child {
+        grid-template-columns: 1fr;
+    }
+
+    .side-bar {
+        display: none;
+    }
+}
+
+#pc-name, .resource-name {
+    color: #c50853;
+}
+
+#pc-name {
+    font-size: 1.5em;
+}
+
+#pc-subtitle, .dice-value {
+    color: #a00b0b;
+}
+
+#pc-subtitle {
+    font-size: 1.25em;
+}
+.side-bar-pageLink {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #000000;
+}
+
+.side-bar-pageLink:hover {
+    font-size: 1.6em;
+    color: #a00b0b;
+}
+
+.side-bar-section {
+    margin-top: 1em;
+}
+
+.side-bar-header {
+    font-size: 1.25em;
+    text-decoration: underline;
+}
+
+.side-bar-section-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.side-bar-section-link:hover {
+    text-decoration: underline;
+    color: #a00b0b;
+}
+
+.content-area {
+    display: inherit;
+    grid-gap: 1em;
+}
+
+#singles-area {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#entire-area {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.resource-name, .dice-value {
+    font-size: 1.25em;
+}
+
+.resource-dropdown
+{
+    margin-left: 0.5em;
+}
+
+.box, #entire-area {
+    display: inherit;
+
+    overflow: auto;
+
+    outline: #000000 solid 0.25em;
+    border-radius: 20px;
+}
+
+.box {
+    background-color: #ffffff;
+}
+
+.box-title {
+    display: inherit;
+
+    margin: auto;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    color: #c50853;
+    font-size: 1.5em;
+}
+
+.box-content {
+    display: inherit;
+
+    justify-content: left;
+    padding: 1em;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    color:#000000;
+
+    border-top: #000000 solid 0.25em;
+}
